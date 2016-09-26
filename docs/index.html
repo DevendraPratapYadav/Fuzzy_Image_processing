@@ -1,5 +1,5 @@
 <html>
-
+<title> Fuzzy Image Processing in MATLAB</title>
 <head>
 <meta http-equiv=Content-Type content="text/html; charset=windows-1252">
 <meta name=Generator content="Microsoft Word 15 (filtered)">
@@ -175,14 +175,14 @@ margin-left:.5in;line-height:normal'><span style='font-size:14.0pt'>Image Noise
 can be of several types:</span></p>
 
 <p class=MsoListParagraphCxSpFirst style='margin-right:.5in;text-indent:-.25in;
-line-height:normal'><span style='font-size:14.0pt;font-family:Symbol'>·<span
+line-height:normal'><span style='font-size:14.0pt;font-family:Symbol'>Â·<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><b><span
 style='font-size:14.0pt'>Gaussian Noise <br>
 </span></b><span style='font-size:14.0pt'>It arises during image capture in
 poorly illuminated conditions</span></p>
 
 <p class=MsoListParagraphCxSpMiddle style='margin-right:.5in;text-indent:-.25in;
-line-height:normal'><span style='font-size:14.0pt;font-family:Symbol'>·<span
+line-height:normal'><span style='font-size:14.0pt;font-family:Symbol'>Â·<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><b><span
 style='font-size:14.0pt'>Salt-and-pepper noise</span></b><span
 style='font-size:14.0pt'> <br>
@@ -190,7 +190,7 @@ Sparsely distributed bright pixels. Caused due to conversion or transmission
 error</span></p>
 
 <p class=MsoListParagraphCxSpMiddle style='margin-right:.5in;text-indent:-.25in;
-line-height:normal'><span style='font-size:14.0pt;font-family:Symbol'>·<span
+line-height:normal'><span style='font-size:14.0pt;font-family:Symbol'>Â·<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><b><span
 style='font-size:14.0pt'>Uniform noise</span></b><span style='font-size:14.0pt'><br>
 Caused by quantization of pixels of captured image. It has uniform distribution</span></p>
@@ -208,7 +208,7 @@ margin-left:.5in;text-align:justify;line-height:normal'><span style='font-size:
 14.0pt'>Here, we develop a fuzzy logic based technique to remove additive noise
 from a color image. Common noise reduction techniques like mean or median lead
 to loss of edge information in the image. We develop an edge sensitive
-technique that preserves edges based on “fuzzy difference” in various
+technique that preserves edges based on â€œfuzzy differenceâ€ in various
 directions. Fuzzy rules based on local neighborhood of pixel are formulated.
 Various membership functions like <i>small, positive and negative</i> are used
 in the rules. The <i>small</i> membership function is optimized based on the
@@ -251,13 +251,13 @@ directions have edges near the pixel being processed (assumed to be at (x,y) ).
 We consider a 3x3 block of pixels with (x,y) pixel being at the center of the
 block. Then we find the difference in luma value ( &#916;( x , y ) ) in all 8
 possible directions, namely, N,S,E,W,NE,NW,SE,SW.<br>
-          </span></p>
+Â Â Â Â Â Â Â Â Â  </span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.5in;margin-bottom:10.0pt;
 margin-left:.5in;line-height:normal'><img width=234 height=206
 src="index_files/image003.png" align=left hspace=12><span style='font-size:
 14.0pt;font-family:"Cambria Math","serif"'>&#916; N ( x , y ) = ( V( x , y-1 )
-)- ( V( x , y ) )     </span></p>
+)- ( V( x , y ) )Â Â Â Â  </span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.5in;margin-bottom:10.0pt;
 margin-left:.5in;line-height:normal'><span style='font-size:14.0pt;font-family:
@@ -270,7 +270,7 @@ margin-left:.5in;line-height:normal'><span style='font-size:14.0pt;font-family:
 x+1 , y-1 ) )- ( V( x , y ) )</span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.5in;margin-bottom:10.0pt;
-margin-left:.5in;line-height:normal'><span style='font-size:14.0pt'>And so on…</span></p>
+margin-left:.5in;line-height:normal'><span style='font-size:14.0pt'>And so onâ€¦</span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.5in;margin-bottom:10.0pt;
 margin-left:.5in;line-height:normal'><span style='font-size:14.0pt'>&nbsp;</span></p>
@@ -319,8 +319,8 @@ we take pixels along the NW diagonal and find their &#916;NE( x , y ).</span></p
 
 <p class=MsoNormal align=center style='margin-top:0in;margin-right:.5in;
 margin-bottom:10.0pt;margin-left:.5in;text-align:center;line-height:normal'><span
-style='font-size:14.0pt'>We find,    d1=&#916;NE( x , y ),  d2= &#916;NE( x-1 ,
-y-1 ),  d3= &#916;NE( x+1 , y+1 ).<br>
+style='font-size:14.0pt'>We find, Â Â Â d1=&#916;NE( x , y ),Â  d2= &#916;NE( x-1 ,
+y-1 ),Â  d3= &#916;NE( x+1 , y+1 ).<br>
 <br>
 <br>
 </span></p>
@@ -371,14 +371,14 @@ take all three difference d1,d2,d3 to be small, we can write the fuzzy rule:</sp
 
 <p class=MsoNormal align=center style='margin-top:0in;margin-right:.5in;
 margin-bottom:10.0pt;margin-left:.5in;text-align:center;line-height:normal'><span
-style='font-size:16.0pt;font-family:"Cambria Math","serif";color:#77933C'>“ IF <b>d1</b>
-is <i>small</i> and <b>d2</b> is <i>small</i> and <b>d3</b> is <i>small  </i>THEN
-&#916;<sub>M</sub> D ( x , y ) is <i>small ”</i></span></p>
+style='font-size:16.0pt;font-family:"Cambria Math","serif";color:#77933C'>â€œ IF <b>d1</b>
+is <i>small</i> and <b>d2</b> is <i>small</i> and <b>d3</b> is <i>smallÂ  </i>THEN
+&#916;<sub>M</sub> D ( x , y ) is <i>small â€</i></span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.5in;margin-bottom:10.0pt;
 margin-left:.5in;line-height:normal'><span style='font-size:14.0pt'>Where d1,
 d2, d3 are the &#916;D( x , y ) of pixels present perpendicular to D and<br>
- </span><span
+Â </span><span
 style='font-size:11.0pt;line-height:115%;font-family:"Calibri","sans-serif";
 position:relative;top:6.0pt'><img width=321 height=31
 src="index_files/image008.png"></span></p>
@@ -402,7 +402,7 @@ style='font-size:20.0pt;font-family:"Segoe UI Semilight","sans-serif"'>finding<b
 margin-left:.5in;line-height:normal'><span style='font-size:14.0pt'>The value
 of <b><i>sd </i></b>determines the spread of the MF <i>small </i>and ultimately
 the threshold for edge detection. Instead of sampling the whole image for
-standard deviation, we take   K x K blocks of the image and find their Standard
+standard deviation, we takeÂ Â  K x K blocks of the image and find their Standard
 Deviation. Then we take the minimum Standard Deviation across all blocks. This
 gives us a measure of the minimum amount of variation in luma values present in
 an almost smooth K x K block in the image. Currently, we choose K=8 for
@@ -410,7 +410,7 @@ reasonable efficiency.</span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.5in;margin-bottom:10.0pt;
 margin-left:.5in;line-height:normal'><span style='font-size:14.0pt'>This
-minimum devation <b><i>sd </i></b> will always be less than the deviation in
+minimum devation <b><i>sd </i></b>Â will always be less than the deviation in
 case of an edge.<br>
 Finally, we multiply Standard Deviation by a amplification parameter <i>a</i>
 to increase noise reduction.</span></p>
@@ -507,7 +507,7 @@ font-family:"Trajan Pro","serif"'>Averaging In all Directions</span></b></p>
 <p class=MsoNormal style='margin-top:0in;margin-right:.5in;margin-bottom:10.0pt;
 margin-left:.5in;line-height:normal'><span style='font-size:14.0pt'>After
 obtaining C<sub>Dp </sub>and<sub> </sub>C<sub>Dn </sub>for all directions, we
-can average their  value to obtain final correction.</span></p>
+can average theirÂ  value to obtain final correction.</span></p>
 
 <p class=MsoNormal align=center style='margin-top:0in;margin-right:.5in;
 margin-bottom:10.0pt;margin-left:.5in;text-align:center;line-height:normal'><span
@@ -525,7 +525,7 @@ style='font-size:14.0pt;font-family:"Cambria Math","serif"'>directions</span></i
 style='font-size:14.0pt;font-family:"Cambria Math","serif"'>= </span><span
 style='font-size:11.0pt;line-height:115%;font-family:"Calibri","sans-serif";
 position:relative;top:6.0pt'><img width=276 height=31
-src="index_files/image011.png"></span><span style='font-size:14.0pt'>  </span></p>
+src="index_files/image011.png"></span><span style='font-size:14.0pt'>Â  </span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.5in;margin-bottom:10.0pt;
 margin-left:.5in;line-height:normal'><span style='font-size:14.0pt'>&nbsp;</span></p>
@@ -559,12 +559,12 @@ style='font-size:20.0pt;font-family:"Trajan Pro","serif"'>Gaussian Noise</span><
 <p class=MsoNormal align=center style='margin-top:0in;margin-right:.5in;
 margin-bottom:10.0pt;margin-left:.5in;text-align:center;line-height:normal'><span
 style='font-size:14.0pt'><img width=551 height=413 id="Picture 20"
-src="index_files/image012.jpg"></span><span style='font-size:14.0pt'> <img
+src="index_files/image012.jpg"></span><span style='font-size:14.0pt'>Â <img
 width=552 height=412 id="Picture 19" src="index_files/image013.jpg"></span></p>
 
 <p class=MsoNormal align=center style='margin-top:0in;margin-right:.5in;
 margin-bottom:10.0pt;margin-left:.5in;text-align:center;line-height:normal'><span
-style='font-size:14.0pt'>Gaussian Noise : 15%                                                                                                 Fuzzy
+style='font-size:14.0pt'>Gaussian Noise : 15%Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  Â Â Â Â Â Â Â Â Â  Â Â Â Â Â Â Â Â Â  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  Fuzzy
 Filtered with <i>a</i>=6</span></p>
 
 <p class=MsoNormal align=center style='margin-top:0in;margin-right:.5in;
@@ -616,13 +616,13 @@ Consolas'> <img width=584 height=437 src="index_files/image017.jpg"></span></p>
 
 <p class=MsoNormal align=center style='margin-top:0in;margin-right:.5in;
 margin-bottom:10.0pt;margin-left:.5in;text-align:center;line-height:normal'><span
-style='font-size:14.0pt'>Uniform Noise = 10%                                                                                                                            Fuzzy
+style='font-size:14.0pt'>Uniform Noise = 10%Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  Â Â Â Â Â Â Â Â Â  Fuzzy
 Filtered, a=5</span></p>
 
 <p class=MsoNormal align=center style='margin-top:0in;margin-right:.5in;
 margin-bottom:10.0pt;margin-left:.5in;text-align:center;line-height:normal'><span
 style='font-size:14.0pt'>We can notice the significant reduction in noise in
-the sky and mountain region. Edges are reasonably preserved as well.                       </span></p>
+the sky and mountain region. Edges are reasonably preserved as well.Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span></p>
 
 <p class=MsoNormal align=center style='margin-top:0in;margin-right:.5in;
 margin-bottom:10.0pt;margin-left:.5in;text-align:center;line-height:normal'><span
@@ -640,13 +640,13 @@ Consolas'> <img width=572 height=428 src="index_files/image019.jpg"></span></p>
 
 <p class=MsoNormal align=center style='margin-top:0in;margin-right:.5in;
 margin-bottom:10.0pt;margin-left:.5in;text-align:center;line-height:normal'><span
-style='font-size:14.0pt'>Fuzzy Filtered, a=5                                                                                                                                 Mean
+style='font-size:14.0pt'>Fuzzy Filtered, a=5Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  Â Â Â Â Â Â Â Â Â  Mean
 Filter</span></p>
 
 <p class=MsoNormal align=center style='margin-top:0in;margin-right:.5in;
 margin-bottom:10.0pt;margin-left:.5in;text-align:center;line-height:normal'><span
 style='font-size:14.0pt'>Better noise reduction and edge preservation than mean
-filter.                                             </span></p>
+filter.Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span></p>
 
 <p class=MsoNormal align=center style='margin-top:0in;margin-right:.5in;
 margin-bottom:10.0pt;margin-left:.5in;text-align:center;line-height:normal'><span
@@ -664,8 +664,8 @@ Consolas'> <img width=575 height=432 src="index_files/image021.jpg"></span></p>
 
 <p class=MsoNormal align=center style='margin-top:0in;margin-right:.5in;
 margin-bottom:10.0pt;margin-left:.5in;text-align:center;line-height:normal'><span
-style='font-size:14.0pt'>Fuzzy Filtered, a=5                                                                                                                       Median
-Filter        </span></p>
+style='font-size:14.0pt'>Fuzzy Filtered, a=5Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  Median
+FilterÂ Â Â Â Â Â Â  </span></p>
 
 <p class=MsoNormal align=center style='margin-top:0in;margin-right:.5in;
 margin-bottom:10.0pt;margin-left:.5in;text-align:center;line-height:normal'><span
@@ -685,7 +685,7 @@ src="index_files/image023.jpg"></span></p>
 
 <p class=MsoNormal align=center style='margin-top:0in;margin-right:.5in;
 margin-bottom:10.0pt;margin-left:.5in;text-align:center;line-height:normal'><span
-style='font-size:14.0pt'>Uniform Noise = 5%                                                                                                                              Fuzzy
+style='font-size:14.0pt'>Uniform Noise = 5%Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  Â Â Â Â Â Â Â Â Â  Fuzzy
 Filtered, a=5</span></p>
 
 <p class=MsoNormal align=center style='margin-top:0in;margin-right:.5in;
@@ -738,11 +738,11 @@ line-height:normal'><span style='font-size:14.0pt'>1.<span style='font:7.0pt "Ti
 <p class=MsoListParagraphCxSpMiddle style='margin-right:.5in;text-indent:-.25in;
 line-height:normal'><span style='font-size:14.0pt'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span><span style='font-size:14.0pt'>Image Noise details :<br>
- <i>https://en.wikipedia.org/wiki/Image_noise</i></span></p>
+Â <i>https://en.wikipedia.org/wiki/Image_noise</i></span></p>
 
 <p class=MsoListParagraphCxSpMiddle style='margin-right:.5in;text-indent:-.25in;
 line-height:normal'><i><span style='font-size:14.0pt'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></i><span style='font-size:14.0pt'>MATLAB fuzzy toolbox  : <br>
+</span></span></i><span style='font-size:14.0pt'>MATLAB fuzzy toolbox Â : <br>
 <i>http://in.mathworks.com/help/fuzzy/mamdani-fuzzy-inference-systems.html</i></span></p>
 
 <p class=MsoListParagraphCxSpMiddle style='margin-right:.5in;text-indent:-.25in;
@@ -770,13 +770,13 @@ image, H. K. Kwan <i>http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=120579
 <p class=MsoListParagraphCxSpMiddle style='margin-right:.5in;text-indent:-.25in;
 line-height:normal'><span style='font-size:14.0pt'>8.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span><span style='font-size:14.0pt'>A fuzzy filter for images corrupted
-by impulse noise,” IEEE Signal Processing Lett., vol. 3, pp. 168–170, June 1996</span></p>
+by impulse noise,â€ IEEE Signal Processing Lett., vol. 3, pp. 168â€“170, June 1996</span></p>
 
 <p class=MsoListParagraphCxSpMiddle style='margin-right:.5in;text-indent:-.25in;
 line-height:normal'><span style='font-size:14.0pt'>9.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span><span style='font-size:14.0pt'>A fuzzy operator for the
-enhancement of blurred and noisy images,” IEEE Trans. Image Processing , vol.
-4, pp. 1169–1174, Aug. 1995</span></p>
+enhancement of blurred and noisy images,â€ IEEE Trans. Image Processing , vol.
+4, pp. 1169â€“1174, Aug. 1995</span></p>
 
 <p class=MsoListParagraphCxSpMiddle style='margin-right:.5in;line-height:normal'><span
 style='font-size:14.0pt'>&nbsp;</span></p>
@@ -858,18 +858,18 @@ sample sub matrices of size 3 X 3 from the image. </span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.5in;margin-bottom:0in;
 margin-left:.5in;margin-bottom:.0001pt;text-indent:.5in;line-height:normal'><span
-style='font-size:14.0pt'>A = [  121    120    118                        B = [    <span
-style='color:red'>0</span>      <span style='color:red'>0</span>      120</span></p>
+style='font-size:14.0pt'>A = [Â  121Â Â Â  120Â Â Â  118Â Â Â  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  B = [ Â Â Â <span
+style='color:red'>0</span>Â Â Â Â Â  <span style='color:red'>0</span>Â Â Â Â  Â 120</span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.5in;margin-bottom:0in;
 margin-left:1.0in;margin-bottom:.0001pt;text-indent:.5in;line-height:normal'><span
-style='font-size:14.0pt'>123    119    121                                  240    <span
-style='color:red'>0          0</span></span></p>
+style='font-size:14.0pt'>123Â Â Â  119Â Â Â  121Â Â Â  Â Â Â Â Â Â Â Â Â   Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  240Â Â Â  <span
+style='color:red'>0Â Â Â Â Â Â Â Â Â  0</span></span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.5in;margin-bottom:0in;
 margin-left:1.0in;margin-bottom:.0001pt;text-indent:.5in;line-height:normal'><span
-style='font-size:14.0pt'>121    121    121 ]                                238    <span
-style='color:red'>0          0 </span>    ]</span></p>
+style='font-size:14.0pt'>121Â Â Â  121Â Â Â  121 ] Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  238Â Â Â  <span
+style='color:red'>0Â Â Â Â Â Â Â Â Â  0 </span>Â Â Â Â ]</span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.5in;margin-bottom:0in;
 margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
@@ -923,7 +923,7 @@ style='font-size:14.0pt'>&nbsp;</span></p>
 <p class=MsoNormal style='margin-top:0in;margin-right:.5in;margin-bottom:0in;
 margin-left:.5in;margin-bottom:.0001pt;text-align:justify;line-height:normal'><b><span
 style='font-size:16.0pt'>Threshold value </span></b><span style='font-size:
-14.0pt'>– As we all know, pixel values range between 0 to 255 for any of the R,
+14.0pt'>â€“ As we all know, pixel values range between 0 to 255 for any of the R,
 G, or B components of a coloured image or the greyness of a grayscale image. </span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.5in;margin-bottom:0in;
@@ -932,12 +932,12 @@ style='font-size:14.0pt'>&nbsp;</span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.5in;margin-bottom:0in;
 margin-left:.5in;margin-bottom:.0001pt;text-align:justify;line-height:normal'><span
-style='font-size:14.0pt'>Thus we define a threshold value T, T  belongs to [0,
+style='font-size:14.0pt'>Thus we define a threshold value T, TÂ  belongs to [0,
 255], such that a pixel P will be considered an edge only if</span></p>
 
 <p class=MsoNormal align=center style='margin-top:0in;margin-right:.5in;
 margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;text-align:center;
-line-height:normal'><span style='font-size:14.0pt'>| P – surrounding pixels |
+line-height:normal'><span style='font-size:14.0pt'>| P â€“ surrounding pixels |
 &gt; T</span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.5in;margin-bottom:0in;
@@ -971,19 +971,19 @@ resulting image. </span></p>
 
 <p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:.5in;
 margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;text-align:justify;
-line-height:normal'><span style='font-size:14.0pt'> </span></p>
+line-height:normal'><span style='font-size:14.0pt'>Â </span></p>
 
 <p class=MsoListParagraphCxSpMiddle align=center style='margin-top:0in;
 margin-right:.5in;margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;
 text-align:center;text-indent:.5in;line-height:normal'><b><span
-style='font-size:14.0pt'>Result with T = 1                                                            Result
+style='font-size:14.0pt'>Result with T = 1 Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  Â Â Â Â Â Â Â Â Â  Result
 with T = 10</span></b></p>
 
 <p class=MsoListParagraphCxSpMiddle align=center style='margin-top:0in;
 margin-right:.5in;margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;
 text-align:center;line-height:normal'><span style='font-size:14.0pt'><img
 width=300 height=302 id="Picture 13" src="index_files/image025.png"></span><span
-style='font-size:14.0pt'>                                        <img
+style='font-size:14.0pt'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  Â Â Â Â Â Â Â Â Â  <img
 width=290 height=295 id="Picture 4" src="index_files/image026.png"></span></p>
 
 <p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:.5in;
@@ -1005,14 +1005,14 @@ eliminated.<br>
 
 <p class=MsoNormal align=center style='margin-top:0in;margin-right:.5in;
 margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;text-align:center;
-line-height:normal'><b><span style='font-size:14.0pt'>Result  with T = 25                                               Result
+line-height:normal'><b><span style='font-size:14.0pt'>ResultÂ  with T = 25Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  Result
 with T = 50</span></b></p>
 
 <p class=MsoListParagraphCxSpFirst align=center style='margin-top:0in;
 margin-right:.5in;margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;
 text-align:center;line-height:normal'><span style='font-size:14.0pt'><img
 width=284 height=286 id="Picture 15" src="index_files/image027.png"></span><b><span
-style='font-size:14.0pt'>                                 </span></b><span
+style='font-size:14.0pt'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  Â Â Â Â Â Â Â Â Â  </span></b><span
 style='font-size:14.0pt'><img width=278 height=280 id="Picture 14"
 src="index_files/image028.png"></span></p>
 
@@ -1028,11 +1028,11 @@ style='font-size:14.0pt'>&nbsp;</span></b></p>
 margin-left:.5in;margin-bottom:.0001pt;text-align:justify;line-height:normal'><span
 style='font-size:14.0pt'>As we can see, a very high threshold value can lead to
 loss of vital information, whereas a very low value can result in erroneous
-edges being produces in the final image.   </span></p>
+edges being produces in the final image.Â Â  </span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.5in;margin-bottom:0in;
 margin-left:.5in;margin-bottom:.0001pt;text-align:justify;line-height:normal'><span
-style='font-size:14.0pt'> </span></p>
+style='font-size:14.0pt'>Â </span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.5in;margin-bottom:0in;
 margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
@@ -1081,14 +1081,14 @@ style='font-size:14.0pt'>g(i,j) : The surrounding pixels</span></p>
 <p class=MsoNormal style='margin-top:0in;margin-right:.5in;margin-bottom:0in;
 margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span style='font-size:11.0pt;line-height:115%;font-family:"Calibri","sans-serif";position:relative;
 top:5.5pt'><img width=14 height=31 src="index_files/image030.png"></span><span
-style='font-size:14.0pt'> : Normalising value   </span></p>
+style='font-size:14.0pt'>Â : Normalising valueÂ Â  </span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.5in;margin-bottom:0in;
 margin-left:.5in;margin-bottom:.0001pt;text-align:justify;line-height:normal'><span
 style='font-size:14.0pt'>After calculating the membership grade for all the
 pixels, we again define the threshold value. In this case however, the
 threshold value lies in the range [0,1]. We mark a pixel as the part of an edge
-if,  Membership grade (Pixel) &gt; T </span></p>
+if, Â Membership grade (Pixel) &gt; T </span></p>
 
 <p class=MsoListParagraph style='margin-top:0in;margin-right:.5in;margin-bottom:
 0in;margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
@@ -1096,7 +1096,7 @@ style='font-size:14.0pt'>&nbsp;</span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.5in;margin-bottom:0in;
 margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
-style='font-size:14.0pt'>Let us see the results produced by this algorithm  :</span></p>
+style='font-size:14.0pt'>Let us see the results produced by this algorithmÂ  :</span></p>
 
 <p class=MsoListParagraphCxSpFirst style='margin-top:0in;margin-right:.5in;
 margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
@@ -1121,7 +1121,7 @@ margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;text-align:justify;
 line-height:normal'><span style='font-size:14.0pt'>When the values of T are
 varied, similar trends as in the case of Crisp Edge Detection are observed i.e.
 no. of edges marked varies inversely with the threshold value.<br>
-   </span></p>
+Â Â  </span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.5in;margin-bottom:0in;
 margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
@@ -1144,17 +1144,17 @@ id="Picture 22" src="index_files/image032.jpg"></span></p>
 <p class=MsoNormal align=center style='margin-top:0in;margin-right:.5in;
 margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;text-align:center;
 text-indent:.5in;line-height:normal'><span style='font-size:12.0pt'>1<sup>st</sup>
-image   : Original grayscale image</span></p>
+image Â Â : Original grayscale image</span></p>
 
 <p class=MsoNormal align=center style='margin-top:0in;margin-right:.5in;
 margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;text-align:center;
 text-indent:.5in;line-height:normal'><span style='font-size:12.0pt'>2<sup>nd</sup>
-image  : Edge detection by Crisp method</span></p>
+image Â : Edge detection by Crisp method</span></p>
 
 <p class=MsoNormal align=center style='margin-top:0in;margin-right:.5in;
 margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;text-align:center;
 text-indent:.5in;line-height:normal'><span style='font-size:12.0pt'>3<sup>rd</sup>
-image  : Edge detection by Fuzzy method</span></p>
+image Â : Edge detection by Fuzzy method</span></p>
 
 <p class=MsoNormal align=center style='margin-top:0in;margin-right:.5in;
 margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;text-align:center;
@@ -1174,12 +1174,12 @@ style='font-size:18.0pt;font-family:"Trajan Pro","serif"'>Coloured Boundaries</s
 margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;text-align:center;
 line-height:normal'><span style='font-size:14.0pt'><img width=348 height=348
 id="Picture 26" src="index_files/image033.png"></span><span style='font-size:
-14.0pt'>                      <img width=356 height=356 id="Picture 23"
+14.0pt'>Â Â Â Â Â Â Â Â Â Â Â  Â Â Â Â Â Â Â Â Â  <img width=356 height=356 id="Picture 23"
 src="index_files/image034.png"></span></p>
 
 <p class=MsoNormal align=center style='margin-top:0in;margin-right:.5in;
 margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;text-align:center;
-line-height:normal'><b><span style='font-size:14.0pt'>Crisp Method (T = 5)                                        
+line-height:normal'><b><span style='font-size:14.0pt'>Crisp Method (T = 5)Â Â Â Â Â Â Â Â Â Â Â Â  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â 
 Fuzzy Method (T = 0.5)</span></b></p>
 
 <p class=MsoNormal align=center style='margin-top:0in;margin-right:.5in;
@@ -1190,12 +1190,12 @@ line-height:normal'><span style='font-size:26.0pt'>&nbsp;</span></p>
 margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;text-align:center;
 line-height:normal'><span style='font-size:14.0pt'><img width=401 height=125
 id="Picture 30" src="index_files/image035.jpg"></span><span style='font-size:
-14.0pt'>             <img width=457 height=152 id="Picture 28"
+14.0pt'>Â Â  Â Â Â Â Â Â Â Â Â  <img width=457 height=152 id="Picture 28"
 src="index_files/image036.png"></span></p>
 
 <p class=MsoNormal align=center style='margin-top:0in;margin-right:.5in;
 margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;text-align:center;
-line-height:normal'><b><span style='font-size:14.0pt'>Original Image                                                      Fuzzy
+line-height:normal'><b><span style='font-size:14.0pt'>Original ImageÂ Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  Fuzzy
 Edge detection<br>
 <br>
 </span></b></p>
@@ -1205,12 +1205,12 @@ margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;text-align:center;
 line-height:normal'><img width=235 height=177 id="Picture 32"
 src="index_files/image037.jpg"
 alt="https://s-media-cache-ak0.pinimg.com/736x/77/9d/a1/779da168008c6803011a59599a61dbe7.jpg"><span
-style='font-size:14.0pt'>                     </span><img width=237 height=176
+style='font-size:14.0pt'>Â Â Â Â Â Â Â Â Â Â  Â Â Â Â Â Â Â Â Â  </span><img width=237 height=176
 id="Picture 33" src="index_files/image038.png"><span style='font-size:14.0pt'>.</span></p>
 
 <p class=MsoListParagraphCxSpFirst align=center style='margin-top:0in;
 margin-right:.5in;margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;
-text-align:center;line-height:normal'><span style='font-size:14.0pt'>Original Image                                             Edges
+text-align:center;line-height:normal'><span style='font-size:14.0pt'>Original ImageÂ Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  Edges
 Detected<br>
 <br>
 </span></p>
@@ -1230,49 +1230,49 @@ line-height:normal'><span style='font-size:14.0pt'>&nbsp;</span></p>
 <p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:.5in;
 margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;text-align:justify;
 text-indent:-.25in;line-height:normal'><span style='font-size:14.0pt;
-font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+font-family:Symbol'>Â·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span><a href="http://in.mathworks.com"><span style='font-size:14.0pt'>http://in.mathworks.com</span></a><span
-style='font-size:14.0pt'> – The official documentation page for MATLAB.</span></p>
+style='font-size:14.0pt'> â€“ The official documentation page for MATLAB.</span></p>
 
 <p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:.5in;
 margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;text-align:justify;
 text-indent:-.25in;line-height:normal'><span style='font-size:14.0pt;
-font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+font-family:Symbol'>Â·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span><a href="http://tizhoosh.uwaterloo.ca"><span style='font-size:
 14.0pt'>http://tizhoosh.uwaterloo.ca</span></a><span style='font-size:14.0pt'>
-– The official page of the University of Waterloo, California</span></p>
+â€“ The official page of the University of Waterloo, California</span></p>
 
 <p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:.5in;
 margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;text-align:justify;
 text-indent:-.25in;line-height:normal;text-autospace:none'><span
-style='font-size:14.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+style='font-size:14.0pt;font-family:Symbol'>Â·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span><span style='font-size:14.0pt'>2010 International Journal of
 Computer Applications (0975 - 8887)</span></p>
 
 <p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:.5in;
 margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;text-align:justify;
-line-height:normal'><span style='font-size:14.0pt'>Volume 1 – No. 22</span></p>
+line-height:normal'><span style='font-size:14.0pt'>Volume 1 â€“ No. 22</span></p>
 
 <p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:.5in;
 margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;text-align:justify;
 text-indent:-.25in;line-height:normal'><span style='font-size:14.0pt;
-font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+font-family:Symbol'>Â·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span><a href="http://journals.plos.org"><span style='font-size:14.0pt'>http://journals.plos.org</span></a><span
 style='font-size:14.0pt'> </span></p>
 
 <p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:.5in;
 margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;text-align:justify;
 text-indent:-.25in;line-height:normal'><span style='font-size:14.0pt;
-font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+font-family:Symbol'>Â·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span><span style='font-size:14.0pt'>L.R. Liang, C.G. Looney / Applied
-Soft Computing 3 (2003) 123–137</span></p>
+Soft Computing 3 (2003) 123â€“137</span></p>
 
 <p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:.5in;
 margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;text-align:justify;
 text-indent:-.25in;line-height:normal'><span style='font-size:14.0pt;
-font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+font-family:Symbol'>Â·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span><a href="http://ieeexplore.ieee.org"><span style='font-size:14.0pt'>http://ieeexplore.ieee.org</span></a><span
-style='font-size:14.0pt'> – The Official Website for IEEE.        </span></p>
+style='font-size:14.0pt'> â€“ The Official Website for IEEE.Â Â Â Â Â Â Â  </span></p>
 
 <p class=MsoListParagraphCxSpMiddle style='margin-right:.5in;line-height:normal'><span
 style='font-size:14.0pt'>&nbsp;</span></p>
